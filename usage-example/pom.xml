@@ -9,16 +9,16 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Usage Example</name>
-    <description>An simple usage example.</description>
-
     <build>
         <plugins>
-
             <plugin>
                 <groupId>com.okta.example</groupId>
                 <artifactId>example-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <!-- optional, the command parameter can be changed here too -->
+                    <command>git rev-parse --short=4 HEAD</command>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -41,7 +41,9 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <message>${line.separator}${line.separator} The project version is ${project.version}-${exampleVersion} ${line.separator}
+                            <message>${line.separator}${line.separator}
+                                The project version is ${project.version}-${exampleVersion}
+                                ${line.separator}
                             </message>
                         </configuration>
                     </execution>

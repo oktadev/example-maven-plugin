@@ -1,14 +1,16 @@
 package com.okta.example.maven;
 
 import org.apache.maven.plugin.MojoExecutionException;
-import org.codehaus.plexus.component.annotations.Component;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.Executors;
 
-@Component(role = VersionProvider.class)
+@Named
+@Singleton
 public class RuntimeExecVersionProvider implements VersionProvider {
     @Override
     public String getVersion(String command) throws MojoExecutionException {

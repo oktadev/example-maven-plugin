@@ -24,7 +24,6 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.version>3.6.0</maven.version>
     </properties>
 
     <dependencies>
@@ -32,12 +31,13 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
-            <version>${maven.version}</version>
+            <version>3.6.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
-            <version>${maven.version}</version>
+            <version>3.6.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -66,15 +66,15 @@
         </pluginManagement>
 
         <plugins>
-            <!-- generates the Plexus container metadata, i.e. bean definitions -->
             <plugin>
-                <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-component-metadata</artifactId>
-                <version>2.0.0</version>
+                <groupId>org.eclipse.sisu</groupId>
+                <artifactId>sisu-maven-plugin</artifactId>
+                <version>0.3.3</version>
                 <executions>
                     <execution>
+                        <id>generate-index</id>
                         <goals>
-                            <goal>generate-metadata</goal>
+                            <goal>main-index</goal>
                         </goals>
                     </execution>
                 </executions>
