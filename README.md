@@ -5,7 +5,7 @@ This repository contains example code for an Apache Maven Plugin.  To see see ho
 **Prerequisites:**
 
 - [Java 8](https://adoptopenjdk.net/)
-- [Maven 3[(https://maven.apache.org/download.cgi)
+- [Maven 3](https://maven.apache.org/download.cgi)
 
 ## Getting Started
 
