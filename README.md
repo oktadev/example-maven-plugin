@@ -1,5 +1,4 @@
 # Tutorial: How to build a Maven Plugin
-====================
 
 This repository contains example code for an Apache Maven Plugin.  To see see how this was build, take a look at the corresponding blog post: [How to Build a Maven Plugin](https://developer.okta.com/blog/2019/09/23/tutorial-build-a-maven-plugin)
 
